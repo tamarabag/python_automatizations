@@ -1,4 +1,4 @@
-# listing filenames into a csv
+# listing filenames from a folder into a csv
 # importing os module
 import os
 import csv
@@ -14,11 +14,11 @@ def main():
         names.append(filename)
         i += 1
 
-# 'w': crea el archivo si no existe y me lo sobre escribe si existe
-# 'a': Opens a file for appending at the end of the file.
+# 'w':  Creates the file if it doesn't exist.
+#       If it exists, it overwrites it.
+# 'a':  Opens a file for appending at the end of the file.
     with open('file_names.csv', 'w') as csvFile:
         writer = csv.writer(csvFile, dialect='excel', delimiter='\n')
-        # writer.write('List of Files in {} Folder'.format(srcFolder))
         writer.writerow(names)
         csvFile.close()
 

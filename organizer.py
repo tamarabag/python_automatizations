@@ -1,4 +1,11 @@
 # Downloads Folder Organizer
+# Automatization: organices files in the download folder
+# rearengin them into specific folders depending on its type
+
+# there are many extentions missing,
+# as this is the first iteration.
+
+
 import os
 import shutil
 
