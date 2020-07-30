@@ -31,6 +31,13 @@ def main():
             shutil.move(srcFolder+'/'+filename, dstFolder +
                         newFolder + '/'+filename)
 
+        elif filename.endswith('.apk'):
+            newFolder = '*APKs*'
+            if not os.path.exists(dstFolder + newFolder):
+                os.mkdir(dstFolder + newFolder)
+            shutil.move(srcFolder+'/'+filename, dstFolder +
+                        newFolder + '/'+filename)
+
         elif filename.endswith('.wav') or filename.endswith('.mp3'):
             newFolder = '*Audios*'
             if not os.path.exists(dstFolder + newFolder):
